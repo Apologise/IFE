@@ -1,0 +1,71 @@
+body{
+	maring:0px;
+	padding: 0px;
+}
+
+/*最大的那个容器*/
+/* 经测量，container与body的内边距都是20px
+container的高度：446px */
+#container{
+	padding:20px;
+	height:446px;
+	background: yellow;
+	overflow: hidden;
+}
+
+/*左边的那个容器
+同样，lef和right距离container的内边距都是20px,left的高度是120px，宽度是160px;
+解决塌陷，我们可以在container里面添加overflow:hidden或者是设置left为左浮动;
+*/
+#left{
+	height:120px;
+	width:200px;
+	background: silver;
+	float:left;
+	overflow: auto;
+}
+
+.logo{
+	width: 80px;
+	height: 80px;
+	background: green;
+	margin: 20px;
+	float: left;
+}
+
+/*右边的那个容器
+最右边的容器高度自动适应，宽度是120px*/
+
+.innerBox{
+	height: 80px;
+	width: 80px;
+	margin-top:20px;
+	background:green;
+}
+#right{
+	width:80px;
+	/*height: auto;*/
+	float:right;
+	padding:0px 20px 20px;
+	background: silver;
+	border: 1px solid silver;
+	overflow: auto;
+}
+
+
+/*中间的那个容器
+中间的容器是自适应宽度，高度是315*/
+#mid{
+ 	margin: 0 140px 0 220px;
+	padding: 20px;
+	border: 1px solid #ccc;
+	background: silver;
+}
+
+
+
+/*设置文字的格式*/
+span{
+	float: right;
+	display: block;
+}
